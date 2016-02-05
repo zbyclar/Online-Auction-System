@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Database Project</title>
+    <!-- CSS -->
+    <link href="css/thumbnail-slider.css" rel="stylesheet" type="text/css">
+    <link href="css/viewitem.css" rel = "stylesheet" type="text/css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/navbar-fixed-top.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar: should be put in every html page to keep consitence -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Project name</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Category <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="catalogue.html">Category1</a></li>
+                <li><a href="catalogue.html">Category2</a></li>
+                <li><a href="catalogue.html">Category3</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="catalogue.html">Category4</a></li>
+                <li><a href="catalogue.html">Category5</a></li>
+              </ul>
+            </li>
+            <li><input style="margin: 10px 50px"type="text" name="search" id="search" class="txtfield" tabindex="0">
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#loginmodal" class="flatbtn" id="modaltrigger">Login</a></li>
+            <li><a href="../navbar-static-top/">Static top</a></li>
+            <li class="active"><a href="./">Fixed top <span class="sr-only">(current)</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div id="loginmodal" style="display:none; z-index:99999;">
+        <h1>User Login</h1>
+        <form id="loginform" name="loginform" method="post" action="index.html">
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username" class="txtfield" tabindex="1">
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" class="txtfield" tabindex="2">
+            <div class="center" style="text-align:center">
+                <input type="button" name="loginbtn" id="loginbtn" class="flatbtn-blu hidemodal" value="Log In" tabindex="3">
+                <input type="button" name="signupbtn" id="signupbtn" class="flatbtn-blu hidemodal" value="Sign Up" tabindex="3" onclick="javascript:window.location.href='signup.html'">
+
+            </div>
+        </form>
+    </div>
+    <div class="container" style="margin-top:30px;font-size:15px;">
+        <div class="col-xs-12 col-md-5">
+            <div class="CheckoutButtonLocation">
+            </div>
+            <div class="panel panel-default">
+            
+                <div class="panel-heading clearfix">
+                     <h4 class="panel-title pull-left">Cheerolet-Camaro-13</h4>
+                </div>
+                 <div class="panel-body">
+                    <form class="form-horizontal" id ="form">
+                    <div class="form-group">
+                    <label class="control-label col-xs-1"></label>
+                    <div class="col-xs-11">
+                        <img id="previewimg" src="img/Chevrolet-Camaro-13.jpg" class="img-rounded" alt="Round Image" style="height:85%;width:90%">
+                    </div>
+                    </div>
+                    <hr class="hr">
+                    <div class="row">
+                        <div class="col-xs-6 col-md-4">
+                            <a href="#">
+                                 <img class="img-thumbnail" src="img/Chevrolet-Camaro-13.jpg">
+                             </a>
+                        </div>
+                        <div class="col-xs-6 col-md-4">
+                            <a href="#">
+                                 <img class="img-thumbnail" src="img/Chevrolet2.jpg">
+                             </a>
+                        </div>
+                        <div class="col-xs-6 col-md-4">
+                            <a href="#">
+                                 <img class="img-thumbnail" src="img/Chevrolet3.jpeg">
+                             </a>
+                        </div>
+
+                   
+                    </div>
+                    </form>
+                 </div>
+           </div>
+         </div>
+      <div class="col-xs-12 col-md-7">
+          <div class="panel panel-default">
+              <table class="table table-condensed bidding">
+          <tr>
+          <td>
+            <strong>Current Price</strong>
+          </td>
+          <td>
+            <strong>
+                <span class="Bidding_Current_Price awe-rt-CurrentPrice">
+                    
+                    £<span class="NumberPart">10,000.00</span>
+                </span>
+
+            </strong>
+          </td>
+
+          </tr>
+
+
+    <tr>
+        <td>Minimum Bid</td>
+        <td>
+            <span class="Bidding_Listing_MinPrice awe-rt-MinimumBid">
+                
+                £<span class="NumberPart">10,000.00</span>
+            </span>
+
+            <em class="awe-rt-MinimumBidMath awe-hidden">
+                &nbsp;(
+                <span class="Bidding_Current_Price awe-rt-CurrentPrice">
+                    
+                    £<span class="NumberPart">10,000.00</span>
+                </span>
+                +
+                <span class="Bidding_Listing_Increment awe-rt-Increment">
+                    
+                    £<span class="NumberPart">100.00</span>
+                </span>
+                )
+            </em>
+        </td>
+    </tr>
+    <tr class="success">
+        <td class="hidden-xs">
+             Your Maximum Proxy Bid
+        </td>
+        <td colspan="2">
+            <p class="visible-xs">
+             Your Maximum Proxy Bid
+            </p>
+            <div class='input-group'><span class='input-group-addon'>£</span><input class="form-control" id="BidAmount" name="BidAmount" type="text" value="" /></div>
+        </td>
+
+        </tr>
+        <tr>
+        <td>
+            <em>
+                        <span class="awe-rt-Hide">
+                            <small>
+                                Remaining Time:
+                            </small><br />
+                            <small data-epoch="ending" data-end-hide-selector="[data-listingid='333085'] .awe-rt-Hide" data-action-time="02/04/2016 21:28:11">
+                                2 Days, 15 Hours
+                            </small>
+                        </span>
+
+            </em>
+        </td>
+        <td>
+            <input type="submit" class="btn btn-success btn-block" onclick="return checkValues()" value="Submit Bid" />
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="2">
+            <small>
+                <em>
+edmond auction now will bid incrementally for you up to your maximum bid. Your maximum bid is kept a secret from other users.  &nbsp;
+                    Your bid is a contract between you and the listing creator.  If you have the highest bid you will enter into a legally binding purchase contract.
+                </em>
+            </small>
+        </td>
+    </tr>
+</table>
+          </div>
+          <div class="panel panel-default">
+        <table class="table table-condensed">
+            <tr>
+                <td>
+                    <strong>Current Price</strong>
+                </td>
+                <td>
+                    <span class="Bidding_Current_Price awe-rt-CurrentPrice">
+                        
+                        $<span class="NumberPart">10,000.00</span>
+                    </span>&nbsp;
+                    
+                    <span class="status-label awe-rt-ColoredStatus">
+                            <span class="label label-info pull-right">Active</span>
+
+                    </span>
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>End Date</strong></td>
+                <td>
+                    <span class="awe-rt-endingDTTM" data-initial-dttm="02/04/2016 21:28:11"></span>
+                    
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>Start Date</strong></td>
+                <td class="awe-rt-startingDTTM" data-initial-dttm="02/01/2016 21:28:11"></td>
+            </tr>
+            <td><strong>Bid History</strong></td>
+                <td>
+                    <span class="awe-rt-AcceptedListingActionCount" data-previous-value="0">0</span>&nbsp;Bids &nbsp;
+
+                </td>
+
+            <tr>
+                <td>
+                    <strong>Listed By</strong>
+                </td>
+                <td>
+                    <span class="Seller">Bidder Bill</span>
+                </td>
+                
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <a class="btn btn-xs btn-info pull-left hidden-xs" href="/AWDemo/Listing/Browse?Seller=BidderBill">View Seller&#39;s Other Listings</a>
+                    <a class="btn btn-xs btn-info pull-left visible-xs" href="/AWDemo/Listing/Browse?Seller=BidderBill">View More Listings</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+      </div>
+      <div class="col-xs-12">
+          <div class="panel panel-default">
+              <div class="panel-body">
+                  <ul class="tabs">
+		<li class="tab-link current" data-tab="tab-1">Description</li>
+		<li class="tab-link" data-tab="tab-2">Bid History</li>
+	</ul>
+
+	<div id="tab-1" class="tab-content current">
+		<table style="direction:ltr; border-collapse:collapse; border-style:solid; border-color:#A3A3A3; border-width:0pt">
+	<tbody>
+		<tr>
+			<td style="border-width:0pt; vertical-align:top; width:2.1993in; padding:4pt 4pt 4pt 4pt">
+			<p style="margin:0in; font-family:Arial; font-size:9.0pt; color:black">Year:</p>
+			</td>
+			<td style="border-width:0pt; vertical-align:top; width:1.4437in; padding:4pt 4pt 4pt 4pt">
+			<p style="margin:0in; font-family:Arial; font-size:9.0pt; color:black">2009</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border-width:0pt; vertical-align:top; width:2.1993in; padding:4pt 4pt 4pt 4pt">
+			<p style="margin:0in; font-family:Arial; font-size:9.0pt; color:black">Vehicle Identification Number (VIN):</p>
+			</td>
+			<td style="border-width:0pt; vertical-align:top; width:1.4437in; padding:4pt 4pt 4pt 4pt">
+			<p style="margin:0in; font-family:Arial; font-size:9.0pt; color:black">01234567890123456</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border-width:0pt; vertical-align:top; width:2.1993in; padding:4pt 4pt 4pt 4pt">
+			<p style="margin:0in; font-family:Arial; font-size:9.0pt; color:black">Mileage:</p>
+			</td>
+			<td style="border-width:0pt; vertical-align:top; width:1.4437in; padding:4pt 4pt 4pt 4pt">
+			<p style="margin:0in; font-family:Arial; font-size:9.0pt; color:black">0</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border-width:0pt; vertical-align:top; width:2.1993in; padding:4pt 4pt 4pt 4pt">
+			<p style="margin:0in; font-family:Arial; font-size:9.0pt; color:black">Exterior Color:</p>
+			</td>
+			<td style="border-width:0pt; vertical-align:top; width:1.4437in; padding:4pt 4pt 4pt 4pt">
+			<p style="margin:0in; font-family:Arial; font-size:9.0pt; color:black">Yellow</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border-width:0pt; vertical-align:top; width:2.1993in; padding:4pt 4pt 4pt 4pt">
+			<p style="margin:0in; font-family:Arial; font-size:9.0pt; color:black">Interior Color:</p>
+			</td>
+			<td style="border-width:0pt; vertical-align:top; width:1.4437in; padding:4pt 4pt 4pt 4pt">
+			<p style="margin:0in; font-family:Arial; font-size:9.0pt; color:black">Black</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border-width:0pt; vertical-align:top; width:2.1993in; padding:4pt 4pt 4pt 4pt">
+			<p style="margin:0in; font-family:Arial; font-size:9.0pt; color:black">Number of Cylinders:</p>
+			</td>
+			<td style="border-width:0pt; vertical-align:top; width:1.4437in; padding:4pt 4pt 4pt 4pt">
+			<p style="margin:0in; font-family:Arial; font-size:9.0pt; color:black">4</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border-width:0pt; vertical-align:top; width:2.1993in; padding:4pt 4pt 4pt 4pt">
+			<p style="margin:0in; font-family:Arial; font-size:9.0pt; color:black">Transmission:</p>
+			</td>
+			<td style="border-width:0pt; vertical-align:top; width:1.4437in; padding:4pt 4pt 4pt 4pt">
+			<p style="margin:0in; font-family:Arial; font-size:9.0pt; color:black">Automatic</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border-width:0pt; vertical-align:top; width:2.1993in; padding:4pt 4pt 4pt 4pt">
+			<p style="margin:0in; font-family:Arial; font-size:9.0pt; color:black">Condition:</p>
+			</td>
+			<td style="border-width:0pt; vertical-align:top; width:1.4437in; padding:4pt 4pt 4pt 4pt">
+			<p style="margin:0in; font-family:Arial; font-size:9.0pt; color:black">New</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="border-width:0pt; vertical-align:top; width:2.1993in; padding:4pt 4pt 4pt 4pt">
+			<p style="margin:0in; font-family:Arial; font-size:9.0pt; color:black">Title:</p>
+			</td>
+			<td style="border-width:0pt; vertical-align:top; width:1.4437in; padding:4pt 4pt 4pt 4pt">
+			<p style="margin:0in; font-family:Arial; font-size:9.0pt; color:black">Clean</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+	</div>
+	<div id="tab-2" class="tab-content">
+		 
+	</div>
+                       
+               </div>
+           
+          </div>
+          
+          
+      </div>
+
+    </div> <!-- /container -->
+    <footer style="text-align:center">Design by Database Project Group</footer>
+
+
+    <!-- ===============================================js============================================== -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/thumbnail-slider.js" type="text/javascript"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.leanModal.min.js"></script>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("img.img-thumbnail").click(function () {
+                var thumb = this;
+                $('#previewimg').fadeOut("fast", function () {
+                    $("#previewimg").attr("src", $(thumb).attr("src"));
+                    $('#previewimg').fadeIn("fast");
+                });
+            });
+            $('ul.tabs li').click(function(){
+		var tab_id = $(this).attr('data-tab');
+
+		$('ul.tabs li').removeClass('current');
+		$('.tab-content').removeClass('current');
+
+		$(this).addClass('current');
+		$("#"+tab_id).addClass('current');
+	    })
+
+        });
+        
+    $('#loginform').submit(function(e){
+    return true;
+    });
+    $('#modaltrigger').leanModal({ top: 110, overlay: 0.45, closeButton: ".hidemodal" });
+   
+
+    
+    </script>
+    
+  </body>
+</html>
