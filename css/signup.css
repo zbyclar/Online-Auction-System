@@ -1,0 +1,78 @@
+.signup form{
+    
+}
+
+.title {
+    text-align:center;
+}
+.control-group-option {
+    text-align:center;
+    margin-bottom:50px;
+    font-size:15px;
+}
+.control-group-option select {
+     margin:3.5px;
+     width:100px;
+     height:20px;
+     color:#7988a3;
+     background-color: #fff;
+     font-size:15px;
+}
+
+option {
+
+    padding-top:500px;
+    padding-bottom:200px;
+}
+
+.control-group input {
+    margin-left:auto;
+    margin-right:auto;
+    width:420px;
+    height:40px;
+    color:#7988a3;
+    background-color: #fff;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#edf3f9), to(#fff));
+    background-image: -webkit-linear-gradient(top, #edf3f9, #fff);
+    background-image: -moz-linear-gradient(top, #edf3f9, #fff);
+    background-image: -ms-linear-gradient(top, #edf3f9, #fff);
+    background-image: -o-linear-gradient(top, #edf3f9, #fff);
+    background-image: linear-gradient(top, #edf3f9, #fff);
+    border: 1px solid;
+    border-color: #abbce8 #c3cae0 #b9c8ef;
+}
+.control-group input:focus {
+    outline: none;
+    color: #525864;
+    border-color: #84c0ee;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), 0 0 7px #96c7ec;
+    -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), 0 0 7px #96c7ec;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), 0 0 7px #96c7ec;
+}
+.help-block {
+    margin-left:32%;
+    font-size:15px;
+}
+.btn {
+    width:300px;
+    background-color:grey;
+    margin:auto;
+}
+
+.control-group-check {
+    text-align:center;
+    margin-bottom:10px;
+    font-size:15px;
+}
+.control-group-check input[type=radio] {
+    margin-left:10px;
+}
+
+.controls {
+    margin-bottom:20px;
+}
+
+.controls-button {
+    margin-bottom:20px;
+    text-align:center;
+}

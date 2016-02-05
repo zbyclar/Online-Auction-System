@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="../../favicon.ico">
+            
+        <title>Database Project</title>
+        <!-- CSS -->
+        <link href="css/signup.css" rel="stylesheet" type="text/css">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/navbar-fixed-top.css" rel="stylesheet">
+        <link href="css/index.css" rel="stylesheet">
+    </head>
+    
+    <body>
+        
+        <!-- Fixed navbar: should be put in every html page to keep consitence -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Project name</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Category <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="catalogue.html">Category1</a></li>
+                                <li><a href="catalogue.html">Category2</a></li>
+                                <li><a href="catalogue.html">Category3</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li class="dropdown-header">Nav header</li>
+                                <li><a href="catalogue.html">Category4</a></li>
+                                <li><a href="catalogue.html">Category5</a></li>
+                            </ul>
+                        </li>
+                        <li><input style="margin: 10px 50px"type="text" name="search" id="search" class="txtfield" tabindex="0">
+                            </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#loginmodal" class="flatbtn" id="modaltrigger">Login</a></li>
+                        <li><a href="../navbar-static-top/">Static top</a></li>
+                        <li class="active"><a href="./">Fixed top <span class="sr-only">(current)</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div id="loginmodal" style="display:none; z-index:99999;">
+            <h1>User Login</h1>
+            <form id="loginform" name="loginform" method="post" action="index.html">
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username" class="txtfield" tabindex="1">
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" class="txtfield" tabindex="2">
+                <div class="center" style="text-align:center">
+                    <input type="submit" name="loginbtn" id="loginbtn" class="flatbtn-blu hidemodal" value="Log In" tabindex="3">
+                    <input type="submit" name="signupbtn" id="signupbtn" class="flatbtn-blu hidemodal" value="Sign Up" tabindex="3" onclick="javascript:window.location.href='signup.html'">
+                </div>
+            </form>
+        </div>
+        <form class="signup" action="" method="POST">
+            <fieldset>
+                <div>
+                    <legend class="title">Register</legend>
+                </div>
+                <div class="control-group-check">
+                    Please choose your gender:
+                    <input type="radio" name="gender" value="male" checked="checked" />Male
+                    <input type="radio" name="gender" value="female" />Female
+                </div>
+                <div class="control-group">
+                    <br>
+                    <div class="controls">
+                        <input type="text" id="username" name="username" placeholder="" class="form-control input-lg" value="Username" onfocus="if(this.value=='Username')this.value='';" onblur="if(!value) {value=defaultValue; this.type='text';}">
+                        <p class="help-block">Username can contain any letters or numbers, without spaces</p>
+                    </div>
+                </div>
+                
+                <div class="control-group">
+                    <br>
+                    <div class="controls">
+                        <input type="email" id="email" name="email" placeholder="" class="form-control input-lg" value="E-mail" onfocus="if(this.value=='E-mail')this.value='';" onblur="if(!value) {value=defaultValue; this.type='text';}">
+                            <p class="help-block">Please provide your E-mail</p>
+                    </div>
+                </div>
+                
+                <div class="control-group">
+                    <br>
+                    <div class="controls">
+                        <input type="text" id="password" name="password" placeholder="" class="form-control input-lg" name="pwd" value="Password" onfocus="if(this.value==defaultValue) {this.value='';this.type='password'}" onblur="if(!value) {value=defaultValue; this.type='text';}">
+                            <p class="help-block">Password should be at least 6 characters</p>
+                    </div>
+                </div>
+                
+                <div class="control-group">
+                    <br>
+                    <div class="controls">
+                        <input type="text" id="password_confirm" name="password_confirm" placeholder="" class="form-control input-lg" value="Password Confirmation" onfocus="if(this.value==defaultValue) {this.value='';this.type='password'}" onblur="if(!value) {value=defaultValue; this.type='text';}">
+                            <p class="help-block">Please confirm password</p>
+                    </div>
+                </div>
+                <div class="control-group-option">
+                    Date of Birth:
+                    <select id="daydropdown">
+                    </select>
+                    <select id="monthdropdown">
+                    </select>
+                    <select id="yeardropdown">
+                    </select>
+                </div>
+                <div class="control-group">
+                    <!-- Button -->
+                    <div class="controls-button">
+                        <button class="btn">Register</button>
+                    </div>
+                </div>
+        </form>
+
+        <script type="text/javascript">
+
+            //populatedropdown(id_of_day_select, id_of_month_select, id_of_year_select)
+            window.onload=function(){
+            populatedropdown("daydropdown", "monthdropdown", "yeardropdown")
+        }
+        </script>
+        </fieldset>
+        </form>
+       <footer style="text-align:center;margin:auto">Design by Database Project Group</footer>
+        <!-- ===============================================js============================================== -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="js/thumbnail-slider.js" type="text/javascript"></script>
+        <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.leanModal.min.js"></script>
+        <script>
+            $(function(){
+              $('#loginform').submit(function(e){
+                                     return true;
+                                     });
+              $('#modaltrigger').leanModal({ top: 110, overlay: 0.45, closeButton: ".hidemodal" });
+              });
+         </script>
+        <script type="text/javascript">
+
+            /***********************************************
+            * Drop Down Date select script- by JavaScriptKit.com
+            * This notice MUST stay intact for use
+            * Visit JavaScript Kit at http://www.javascriptkit.com/ for this script and more
+            ***********************************************/
+
+            var monthtext=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sept','Oct','Nov','Dec'];
+
+            function populatedropdown(dayfield, monthfield, yearfield){
+                var today=new Date()
+                var dayfield=document.getElementById(dayfield)
+                var monthfield=document.getElementById(monthfield)
+                var yearfield=document.getElementById(yearfield)
+                for (var i=0; i<=31; i++)
+                    dayfield.options[i]=new Option(i, i+1)
+                    dayfield.options[today.getDate()]=new Option(today.getDate(), today.getDate(), true, true) //select today's day
+                for (var m=0; m<12; m++)
+                    monthfield.options[m]=new Option(monthtext[m], monthtext[m])
+                    monthfield.options[today.getMonth()]=new Option(monthtext[today.getMonth()], monthtext[today.getMonth()], true, true) //select today's month
+                var thisyear=today.getFullYear()
+                for (var y=0; y<100; y++){
+                    yearfield.options[y]=new Option(thisyear, thisyear)
+                    thisyear-=1;
+                }
+                yearfield.options[0]=new Option(today.getFullYear(), today.getFullYear(), true, true) //select today's year
+            }
+    </script>
+    </body>
+</html>
+
