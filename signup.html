@@ -48,7 +48,8 @@
                                 <li><a href="catalogue.html">Category5</a></li>
                             </ul>
                         </li>
-                        <li><input style="margin: 10px 50px"type="text" name="search" id="search" class="txtfield" tabindex="0">
+                        <li><input type="text" name="search" id="search" class="searchbox" tabindex="0"></li>
+                        <li><a href="search">search</a></li>
                             </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="#loginmodal" class="flatbtn" id="modaltrigger">Login</a></li>
@@ -66,15 +67,17 @@
                 <label for="password">Password:</label>
                 <input type="password" name="password" id="password" class="txtfield" tabindex="2">
                 <div class="center" style="text-align:center">
-                    <input type="submit" name="loginbtn" id="loginbtn" class="flatbtn-blu hidemodal" value="Log In" tabindex="3">
-                    <input type="submit" name="signupbtn" id="signupbtn" class="flatbtn-blu hidemodal" value="Sign Up" tabindex="3" onclick="javascript:window.location.href='signup.html'">
+                    <input type="button" name="loginbtn" id="loginbtn" class="flatbtn-blu hidemodal" value="Log In" tabindex="3">
+                    <input type="button" name="closebtn" id="closebtn" class="flatbtn-blu hidemodal" value="Close" tabindex="3">
+                    <br><br>
+                    <a class="signup"href="signup.html">Sign Up For New Users</a>
                 </div>
             </form>
         </div>
         <form class="signup" action="" method="POST">
             <fieldset>
                 <div>
-                    <legend class="title">Register</legend>
+                    <legend class="title"><h1>Register</h1></legend>
                 </div>
                 <div class="control-group-check">
                     Please choose your gender:
@@ -84,32 +87,32 @@
                 <div class="control-group">
                     <br>
                     <div class="controls">
-                        <input type="text" id="username" name="username" placeholder="" class="form-control input-lg" value="Username" onfocus="if(this.value=='Username')this.value='';" onblur="if(!value) {value=defaultValue; this.type='text';}">
-                        <p class="help-block">Username can contain any letters or numbers, without spaces</p>
+                        <input type="text" id="username" name="username" placeholder="" class="form-control input-lg" value="Username" onfocus="if(this.value=='Username')this.value='';" onblur="if(!value) {value=defaultValue; this.type='text';}" data-toggle="popover"  data-content="Username can contain any letters or numbers, without spaces">
+
                     </div>
                 </div>
                 
                 <div class="control-group">
                     <br>
                     <div class="controls">
-                        <input type="email" id="email" name="email" placeholder="" class="form-control input-lg" value="E-mail" onfocus="if(this.value=='E-mail')this.value='';" onblur="if(!value) {value=defaultValue; this.type='text';}">
-                            <p class="help-block">Please provide your E-mail</p>
+                        <input type="email" id="email" name="email" placeholder="" class="form-control input-lg" value="E-mail" onfocus="if(this.value=='E-mail')this.value='';" onblur="if(!value) {value=defaultValue; this.type='text';}" data-toggle="popover"  data-content="Please provide your E-mail">
+
                     </div>
                 </div>
                 
                 <div class="control-group">
                     <br>
                     <div class="controls">
-                        <input type="text" id="password" name="password" placeholder="" class="form-control input-lg" name="pwd" value="Password" onfocus="if(this.value==defaultValue) {this.value='';this.type='password'}" onblur="if(!value) {value=defaultValue; this.type='text';}">
-                            <p class="help-block">Password should be at least 6 characters</p>
+                        <input type="text" id="password" name="password" placeholder="" class="form-control input-lg" name="pwd" value="Password" onfocus="if(this.value==defaultValue) {this.value='';this.type='password'}" onblur="if(!value) {value=defaultValue; this.type='text';}" data-toggle="popover"  data-content="Password should be at least 6 characters">
+
                     </div>
                 </div>
                 
                 <div class="control-group">
                     <br>
                     <div class="controls">
-                        <input type="text" id="password_confirm" name="password_confirm" placeholder="" class="form-control input-lg" value="Password Confirmation" onfocus="if(this.value==defaultValue) {this.value='';this.type='password'}" onblur="if(!value) {value=defaultValue; this.type='text';}">
-                            <p class="help-block">Please confirm password</p>
+                        <input type="text" id="password_confirm" name="password_confirm" placeholder="" class="form-control input-lg" value="Password Confirmation" onfocus="if(this.value==defaultValue) {this.value='';this.type='password'}" onblur="if(!value) {value=defaultValue; this.type='text';}" data-toggle="popover"  data-content="Please confirm password">
+
                     </div>
                 </div>
                 <div class="control-group-option">
@@ -145,6 +148,22 @@
         <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/jquery.leanModal.min.js"></script>
+        <script>
+$(function() {
+  // 初始化 popover，触发方式为手动触发
+  $("[data-toggle='popover']").popover({
+
+  })
+  .on('focus', function() {
+    // 获得焦点时隐藏
+    $(this).popover('show');
+  })
+  .on('blur', function() {
+    // 失去焦点时显示
+    $(this).popover('hide');
+  });
+});
+</script>
         <script>
             $(function(){
               $('#loginform').submit(function(e){
