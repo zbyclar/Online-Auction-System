@@ -1,16 +1,22 @@
  .btn-success{
     margin-top:10px;
-    width:60%;
-    margin-left:15%;
+
 }
 
 .item-description {
-    margin-left:30%;
+    text-align:center;
 }
-.col-mod-4 {
-    margin:5px;
+.col-md-4 {
+
+    vertical-align:middle;
+    text-align:center
 }
 
 .row {
     margin-top:10px;
+}
+
+img {
+    border-radius:4px;
+    box-shadow: 3px 3px 1px #888888;
 }

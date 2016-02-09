@@ -54,6 +54,8 @@ option {
     font-size:15px;
 }
 .btn {
+
+    height:40px;
     width:300px;
     background-color:grey;
     margin:auto;
@@ -73,6 +75,8 @@ option {
 }
 
 .controls-button {
-    margin-bottom:20px;
+
+    margin-bottom:60px;
     text-align:center;
 }
+
