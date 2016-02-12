@@ -11,6 +11,41 @@ header a, header span {
     text-align: center;
     height: 20px;
 }
+.modal-dialog {
+    max-height: 100%;
+     width: 300px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    
+}
+.modal-body {
+    max-height: calc(100vh - 210px);
+    overflow-y: auto;
+}
+
+.modal {
+  text-align: center;
+  padding: 0!important;
+}
+.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px; Adjusts for spacing 
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+ */
+#myModalLabel{
+//bottom:50%;
+outline: none;
+}
+/* 
 #loginmodal {
     width: 300px;
     padding: 15px 20px;
@@ -22,6 +57,8 @@ header a, header span {
     -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
 }
+ */
+
 #loginform label { display: block; font-size: 1.1em; font-weight: bold; color: #7c8291; margin-bottom: 3px; }
 
 

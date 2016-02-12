@@ -61,7 +61,12 @@
             </div>
         </nav>
         <div id="loginmodal" style="display:none; z-index:99999;">
-            <h1>User Login</h1>
+        <div class=" panel panel-default modal-dialog">
+            <div class="modal-header">
+                    <button style="color: black" type="button" class="close" onclick = "show_modal('loginmodal');" >×</button>
+                    <h4 style="color: black;text-align: center" class="modal-title" id="myModalLabel">Login</h4>
+                 </div>
+                 <div class="modal-body">
             <form id="loginform" name="loginform" method="post" action="index.html">
                 <label for="username">Username:</label>
                 <input type="text" name="username" id="username" class="txtfield" tabindex="1">
@@ -74,6 +79,8 @@
                     <a class="signup"href="signup.html">Sign Up For New Users</a>
                 </div>
             </form>
+        </div>
+        </div>
         </div>
         <div class="container-fluid">
             <div class="row">
@@ -360,6 +367,23 @@
                                      });
               $('#modaltrigger').leanModal({ top: 110, overlay: 0.45, closeButton: ".hidemodal" });
               });
+              function show_modal(editModal){
+       
+    var show = document.getElementById(editModal);
+    if (show.style.display === "block"){
+            
+        show.style.display = "none";
+        show.setAttribute("aria-hidden",true);
+        show.class = "modal fade";
+            
+    } else {
+            
+        show.style.display = "block";
+        show.setAttribute("aria-hidden",false);
+        show.className = "modal fade in";
+            
+    }
+    }
             </script>
     </body>
 </html>

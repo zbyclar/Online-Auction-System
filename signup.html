@@ -60,7 +60,14 @@
             </div>
         </nav>
         <div id="loginmodal" style="display:none; z-index:99999;">
-            <h1>User Login</h1>
+            
+            <div class=" panel panel-default modal-dialog">
+
+                <div class="modal-header">
+                    <button style="color: black" type="button" class="close" onclick = "show_modal('loginmodal');" >×</button>
+                    <h4 style="color: black;text-align: center" class="modal-title" id="myModalLabel">Login</h4>
+                 </div>
+         <div class="modal-body">
             <form id="loginform" name="loginform" method="post" action="index.html">
                 <label for="username">Username:</label>
                 <input type="text" name="username" id="username" class="txtfield" tabindex="1">
@@ -73,12 +80,19 @@
                     <a class="signup"href="signup.html">Sign Up For New Users</a>
                 </div>
             </form>
+            </div>
+            </div>
         </div>
+        <div class="container">
+        <div class="panel panel-default">
+            
+                <div class="panel-heading clearfix">
+                     <h4 class="panel-title">Register</h4>
+                </div>
+                 <div class="panel-body">
         <form class="signup" action="" method="POST">
             <fieldset>
-                <div>
-                    <legend class="title"><h1>Register</h1></legend>
-                </div>
+                
                 <div class="control-group-check">
                     Please choose your gender:
                     <input type="radio" name="gender" value="male" checked="checked" />Male
@@ -131,6 +145,9 @@
                     </div>
                 </div>
         </form>
+        </div>
+        </div>
+        </div>
 
         <script type="text/javascript">
 
@@ -200,6 +217,23 @@ $(function() {
                 }
                 yearfield.options[0]=new Option(today.getFullYear(), today.getFullYear(), true, true) //select today's year
             }
+            function show_modal(editModal){
+       
+    var show = document.getElementById(editModal);
+    if (show.style.display === "block"){
+            
+        show.style.display = "none";
+        show.setAttribute("aria-hidden",true);
+        show.class = "modal fade";
+            
+    } else {
+            
+        show.style.display = "block";
+        show.setAttribute("aria-hidden",false);
+        show.className = "modal fade in";
+            
+    }
+}
     </script>
     </body>
 </html>
