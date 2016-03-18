@@ -1,0 +1,66 @@
+.row {
+    margin-top:20px;
+    width: 100%;
+    background-color:#0099CC;
+    border:solid white 1px;
+    border-radius:10px;
+    color:#fff;
+    box-shadow: 3px 3px 1px #888888;
+}
+.booking {
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
+
+}
+.cleaner {
+    margin-left:20px;
+    margin-top:10px;
+    font-size:15px;
+}
+.span4 {
+    margin-bottom:20px;
+}
+img {
+    margin-left:40px;
+    margin-top:20px;
+    border-radius:10px;
+    width:200px;
+    border:solid #fff9e5 2px!important;
+    box-shadow: 3px 3px 1px #888888;
+}
+.price {
+    text-align:center;
+}
+.span4 {
+    float:left;
+}
+.button-group{
+    text-align:center;
+}
+.btn-success {
+    width:100px;
+    margin:20px;
+    background-color:#49CAF5;
+}
+.btu-success:hover {
+    background-color:#04A6DB;
+}
+table {
+    border:none;
+    margin-bottom:20px;
+}
+caption {
+    text-align:center;
+    color:white;
+}
+td {
+    height:25px;
+    width: 200px;
+}
+
+.location {
+    margin-top:10px;
+    text-align:center;
+}
+

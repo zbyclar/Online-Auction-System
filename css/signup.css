@@ -7,7 +7,6 @@
 }
 .control-group-option {
     text-align:center;
-    margin-bottom:50px;
     font-size:15px;
 }
 .control-group-option select {
@@ -57,8 +56,12 @@ option {
 
     height:40px;
     width:300px;
-    background-color:grey;
+    color:#fff;
+    background-color:#3399CC;
     margin:auto;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+    font-size: 1.3em!important;
+    font-weight: bold!important;
 }
 
 .control-group-check {
@@ -79,4 +82,9 @@ option {
     margin-bottom:60px;
     text-align:center;
 }
-
+ .panel-default {
+     background-color:#A9F5F2!important;
+     margin-left:auto;
+     margin-right:auto;
+     width:80%;
+}
