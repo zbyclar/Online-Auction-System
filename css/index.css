@@ -1,4 +1,8 @@
-body {font: normal 1.2em Arial;color:#222;}
+body {
+    
+    background-color:#FFFFFF!important;
+    font-family:Verdana, Geneva, sans-serif!important;
+}
 header {display:block; font-size:1.2em;margin-bottom:100px;}
 header a, header span {
     display: inline-block;
@@ -13,7 +17,7 @@ header a, header span {
 }
 .modal-dialog {
     max-height: 100%;
-     width: 300px;
+     width: 380px;
     overflow-y: scroll;
     overflow-x: hidden;
     
@@ -40,12 +44,11 @@ header a, header span {
   text-align: left;
   vertical-align: middle;
 }
-
 #myModalLabel{
-//bottom:50%;
-outline: none;
+    //bottom:50%;
+    outline: none;
 }
-/* 
+
 #loginmodal {
     width: 300px;
     padding: 15px 20px;
@@ -57,9 +60,11 @@ outline: none;
     -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
 }
- */
+
+#loginform { /* no default styles */ }
 
 #loginform label { display: block; font-size: 1.1em; font-weight: bold; color: #7c8291; margin-bottom: 3px; }
+
 
 
 .txtfield {
@@ -67,7 +72,6 @@ outline: none;
     width: 100%;
     padding: 6px 5px;
     margin-bottom: 15px;
-    font-family: 'Helvetica Neue', Helvetica, Verdana, sans-serif;
     color: #7988a3;
     font-size: 1.4em;
     text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.8);
@@ -190,4 +194,11 @@ padding:3px 14px!important;
 .signup {
 
     margin-top:10px;
+}
+#bottom {
+    text-align:center;
+    position: fixed;
+    bottom:0;
+    left:0;
+    width:100%;
 }

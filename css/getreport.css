@@ -1,0 +1,28 @@
+table {
+    border:none!important;
+    margin:20px;
+}
+th {
+    height:40px;
+}
+td {
+    width:200px;
+    height:40px;
+}
+caption {
+    text-align:center;
+}
+button{
+    margin-top:20px;
+    margin-bottom:20px!important;
+    border:none;
+    border-radius:5px;
+    height:40px;
+    width:150px;
+    color:#fff;
+    background-color:#99CC33;
+    margin:auto;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+    font-size: 1.3em!important;
+    font-weight: bold!important;}
+}

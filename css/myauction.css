@@ -1,0 +1,75 @@
+.row {
+    margin-top:20px;
+    margin-left:0px;
+    width: 100%;
+    background-color:#663399;
+    border:solid white 1px;
+    border-radius:10px;
+    color:#fff;
+    box-shadow: 3px 3px 1px #888888;
+}
+.cleaner {
+    margin-left:20px;
+    margin-top:10px;
+    font-size:15px;
+}
+img {
+    margin-left:40px;
+    margin-top:20px;
+    border-radius:10px;
+    width:200px;
+    border:solid #fff9e5 2px!important;
+    box-shadow: 3px 3px 1px #888888;
+}
+.price {
+    text-align:center;
+}
+.span4 {
+    float:left;
+}
+.button-group{
+    text-align:center;
+}
+button{
+    margin-top:20px;
+    margin-bottom:20px!important;
+    border:none;
+    border-radius:5px;
+    height:40px;
+    width:150px;
+    color:#fff;
+    background-color:#99CC33;
+    margin:auto;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+    font-size: 1.3em!important;
+    font-weight: bold!important;}
+}
+.bt-success:hover {
+    background-color:#04A6DB;
+}
+.row-past {
+    margin-top:20px;
+    margin-left:0px;
+    width: 100%;
+    background-color:#0099CC;
+    border:solid white 1px;
+    border-radius:10px;
+    color:#fff;
+    box-shadow: 3px 3px 1px #888888;
+}
+table {
+    border:none!important;
+    margin:20px;
+}
+td {
+    height:25px;
+    width: 120px;
+}
+
+.location {
+    margin-top:30px;
+    text-align:center;
+}
+.datetime {
+    text-align:center;
+}

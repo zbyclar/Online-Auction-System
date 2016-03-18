@@ -1,6 +1,24 @@
 body {
    padding-top: 70px;
 }
-.navbar .navbar-default .navbar-fixed-top{
-   width:100%;
+.navbar-fixed-top{
+    background-color:#0099CC!important;
+    color:#fff!important;
+}
+.navbar-default .navbar-nav>li>a {
+    color: #fff!important;
+}
+.navbar-default .navbar-nav>.active>a {
+    background-color:#0099CC!important;
+    color:#fff!important;
+}
+.dropdown-menu li {
+    margin-top:8px;
+    margin-bottom:8px;
+}
+
+#special {
+    color:red;
+    margin-left:10px;
+    font-size:8px;
 }

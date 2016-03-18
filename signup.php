@@ -1,6 +1,7 @@
 <?php
     session_start();
-    include('connect.php'); $page = "signup";
+    include('connect.php');
+    $page = "signup";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,6 +19,7 @@
         <link href="css/signup.css" rel="stylesheet" type="text/css">
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/navbar-fixed-top.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link href="css/index.css" rel="stylesheet">
     </head>
     
@@ -27,10 +29,10 @@
         <div class="panel panel-default">
             
                 <div class="panel-heading clearfix">
-                     <h4 class="panel-title">Register</h4>
+                     <center><h4 class="panel-title">Register</h4></center>
                 </div>
                  <div class="panel-body">
-        <form class="signup" action="" method="POST">
+        <form class="signup" action="usersignup.php" method="POST">
             <fieldset>
                 
                 <div class="control-group-check">
@@ -41,7 +43,7 @@
                 <div class="control-group">
                     <br>
                     <div class="controls">
-                        <input type="text" id="username" name="username" placeholder="" class="form-control input-lg" value="Username" onfocus="if(this.value=='Username')this.value='';" onblur="if(!value) {value=defaultValue; this.type='text';}" data-toggle="popover"  data-content="Username can contain any letters or numbers, without spaces">
+                        <input type="text" id="username_ini" name="username_ini" placeholder="" class="form-control input-lg" value="Username" onfocus="if(this.value=='Username')this.value='';" onblur="if(!value) {value=defaultValue; this.type='text';}" data-toggle="popover"  data-content="Username can contain any letters or numbers, without spaces">
 
                     </div>
                 </div>
@@ -49,7 +51,7 @@
                 <div class="control-group">
                     <br>
                     <div class="controls">
-                        <input type="email" id="email" name="email" placeholder="" class="form-control input-lg" value="E-mail" onfocus="if(this.value=='E-mail')this.value='';" onblur="if(!value) {value=defaultValue; this.type='text';}" data-toggle="popover"  data-content="Please provide your E-mail">
+                        <input type="email" id="email" name="email" placeholder="" class="form-control input-lg" value="E-mail" onfocus="if(this.value=='E-mail')this.value='';" onblur="if(!value) {value=defaultValue; this.type='text';}" data-toggle="popover"  data-content="Please provide your E-mail" onKeyUp="validateForm()" required>
 
                     </div>
                 </div>
@@ -57,7 +59,7 @@
                 <div class="control-group">
                     <br>
                     <div class="controls">
-                        <input type="text" id="password" name="password" placeholder="" class="form-control input-lg" name="pwd" value="Password" onfocus="if(this.value==defaultValue) {this.value='';this.type='password'}" onblur="if(!value) {value=defaultValue; this.type='text';}" data-toggle="popover"  data-content="Password should be at least 6 characters">
+                        <input type="text" id="password_ini" name="password_ini" placeholder="" class="form-control input-lg" name="pwd" value="Password" onfocus="if(this.value==defaultValue) {this.value='';this.type='password'}" onblur="if(!value) {value=defaultValue; this.type='text';}" data-toggle="popover"  data-content="Password should be at least 6 characters" onKeyUp="validatePwd()" required>
 
                     </div>
                 </div>
@@ -65,23 +67,29 @@
                 <div class="control-group">
                     <br>
                     <div class="controls">
-                        <input type="text" id="password_confirm" name="password_confirm" placeholder="" class="form-control input-lg" value="Password Confirmation" onfocus="if(this.value==defaultValue) {this.value='';this.type='password'}" onblur="if(!value) {value=defaultValue; this.type='text';}" data-toggle="popover"  data-content="Please confirm password">
+                        <input type="text" id="password_confirm" name="password_confirm" placeholder="" class="form-control input-lg" value="Password Confirmation" onfocus="if(this.value==defaultValue) {this.value='';this.type='password'}" onblur="if(!value) {value=defaultValue; this.type='text';}" data-toggle="popover"  data-content="Please confirm password" onKeyUp="validatePwdconfirm()" required>
 
                     </div>
                 </div>
                 <div class="control-group-option">
                     Date of Birth:
-                    <select id="daydropdown">
+                    <select id="daydropdown" name="day">
                     </select>
-                    <select id="monthdropdown">
+                    <select id="monthdropdown" name="month">
                     </select>
-                    <select id="yeardropdown">
+                    <select id="yeardropdown" name="year">
                     </select>
+                </div>
+                <div class="control-group-check">
+                    <br>
+                    <div class="controls">
+                        <input type="checkbox" id="issub" name="issub" value="0" onclick="this.value=(this.value==0)?1:0">Would you like to get our latest update via email ?
+                    </div>
                 </div>
                 <div class="control-group">
                     <!-- Button -->
                     <div class="controls-button">
-                        <button class="btn">Register</button>
+                        <button class="btn" id="btn_submit" name="submit" onclick="check()">Register</button>
                     </div>
                 </div>
         </form>
@@ -98,7 +106,7 @@
         </script>
         </fieldset>
         </form>
-       <footer style="text-align:center;margin:auto">Design by Database Project Group</footer>
+        <footer id="bottom">Design by Database Project Group</footer>
         <!-- ===============================================js============================================== -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="js/thumbnail-slider.js" type="text/javascript"></script>
@@ -137,7 +145,7 @@ $(function() {
             * Visit JavaScript Kit at http://www.javascriptkit.com/ for this script and more
             ***********************************************/
 
-            var monthtext=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sept','Oct','Nov','Dec'];
+            var monthtext=['01','02','03','04','05','06','07','08','09','10','11','12'];
 
             function populatedropdown(dayfield, monthfield, yearfield){
                 var today=new Date()
@@ -158,21 +166,60 @@ $(function() {
                 yearfield.options[0]=new Option(today.getFullYear(), today.getFullYear(), true, true) //select today's year
             }
             function show_modal(editModal){
-       
-    var show = document.getElementById(editModal);
-    if (show.style.display === "block"){
-            
-        show.style.display = "none";
-        show.setAttribute("aria-hidden",true);
-        show.class = "modal fade";
-            
-    } else {
-            
-        show.style.display = "block";
-        show.setAttribute("aria-hidden",false);
-        show.className = "modal fade in";
-            
+                var show = document.getElementById(editModal);
+                if (show.style.display === "block"){
+                    show.style.display = "none";
+                    show.setAttribute("aria-hidden",true);
+                    show.class = "modal fade";
+                } else {
+                    show.style.display = "block";
+                    show.setAttribute("aria-hidden",false);
+                    show.className = "modal fade in";
+                }
+            }
+function validateForm(email){
+    document.getElementById('btn_submit').disabled = true;
+    var regEx = /^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/;
+    var email = document.getElementById('email').value;
+    var emailTest = regEx.test(email);
+    if(emailTest == true){
+        $("#email").css("border","solid #abbce8 1px");
+        document.getElementById('btn_submit').disabled = false;
     }
+    if(emailTest == false){
+        $("#email").css("border","solid pink");
+        return false;
+    }
+}
+function validatePwd(){
+    document.getElementById('btn_submit').disabled = true;
+    var pwd = document.getElementById('password_ini').value;
+    if(pwd.length >= 6){
+        $("#password_ini").css("border","solid #abbce8 1px");
+        document.getElementById('btn_submit').disabled = false;
+    }else{
+        $("#password_ini").css("border","solid pink");
+    }
+
+}
+function validatePwdconfirm(){
+    document.getElementById('btn_submit').disabled = true;
+    var pwd = document.getElementById('password_ini').value;
+    var retype_pwd = document.getElementById('password_confirm').value;
+    if(retype_pwd == pwd){
+        $("#password_confirm").css("border","solid #abbce8 1px");
+        document.getElementById('btn_submit').disabled = false;
+    }else{
+        $("#password_confirm").css("border","solid pink");
+    }
+}
+function check(){
+    var username = document.getElementById('username_ini').value;
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('password_ini').value;
+    console.log(username);
+    console.log(email);
+    console.log(password);
 }
     </script>
     </body>

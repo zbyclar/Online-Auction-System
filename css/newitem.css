@@ -35,6 +35,12 @@
     border-color: #abbce8 #c3cae0 #b9c8ef;
     border-radius:3px;
 }
+.panel-default {
+    background-color:#A9F5F2!important;
+    margin-left:auto;
+    margin-right:auto;
+    width:80%;
+}
 .input-group {
     
     margin-left:auto;
@@ -77,20 +83,41 @@ tbody {
 
 .btn {
 
-    height:40px;
-    width:300px;
-    background-color:grey;
-    margin:auto;
+height:40px;
+width:300px;
+color:#fff;
+background-color:#3399CC;
+margin:auto;
+text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+font-size: 1.3em!important;
+font-weight: bold!important;
 }
 .input-box {
     width:400px;
 }
-
+.panel-title {
+    text-align:center;
+}
 .controls-button {
 
     margin-bottom:60px;
     text-align:center;
 }
+.upload {
+    text-align:center;
+}
+.upload-button {
+    height:40px;
+    width:200px;
+    color:#fff;
+    background-color:#99CC33;
+    margin:auto;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+    font-size: 1.3em!important;
+    font-weight: bold!important;
+   
+}
 .col-md-12 {
     margin-bottom:100px;
+    
 }

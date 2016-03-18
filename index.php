@@ -16,6 +16,7 @@
 
     <title>Database Project</title>
     <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href="css/thumbnail-slider.css" rel="stylesheet" type="text/css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/navbar-fixed-top.css" rel="stylesheet">
@@ -26,13 +27,27 @@
 
     <?php include('navbar.php'); ?>
       <!-- change the below part for each html page -->
+    <div id="display_results"></div>
     <div style="padding:120px 0;">
         <div id="thumbnail-slider">
             <div class="inner">
                 <ul>
+                    <?php
+                        $link = mysqli_connect('localhost','zby','root','Database_Project');
+                        $query = "SELECT * FROM tbl_item WHERE item_poster IS NOT NULL";
+                        $result = mysqli_query($link, $query);
+                        while($row = mysqli_fetch_array($result)){
+                            ?>
                     <li>
-                        <a class="thumb" href="img/6.jpg"></a>
+                        <a href="itemview.php?id=<?php echo $row['item_id'];?>" >
+                        <img class="thumb" src="<?php echo $row['item_poster'];?>">
+                        </a>
                     </li>
+                    <?php
+                    }
+                    ?>
+
+                    <!--
                     <li>
                         <a class="thumb" href="img/7.jpg"></a>
                     </li>
@@ -59,12 +74,12 @@
                     </li>
                     <li>
                         <a class="thumb" href="img/11.jpg"></a>
-                    </li>
+                    </li>-->
                 </ul>
             </div>
         </div>
     </div>
-    <footer style="text-align:center">Design by Database Project Group</footer>
+    <footer id="bottom">Design by Database Project Group</footer>
 
 
     <!-- ===============================================js============================================== -->
@@ -77,6 +92,24 @@
     $(function(){
     $('#loginform').submit(function(e){
     return true;
+    });
+    $('#search').keyup(function(){
+        var filter = $(this).val();
+        console.log(filter);
+        $.ajax({
+        type: "POST",
+        url: "getsearch.php",
+        data: {filter: filter},
+        success: function(result){    
+            if(result) {
+                $('#searchappend').append(result);
+                
+            }
+            else{
+            }
+            
+        }
+        });
     });
     $('#modaltrigger').leanModal({ top: 110, overlay: 0.45, closeButton: ".hidemodal" });
     });
